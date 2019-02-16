@@ -1,0 +1,9 @@
+[
+  {
+    "command": "move",
+    "args": {
+      "by": "characters",
+      "forward": true
+    }
+  }
+]
