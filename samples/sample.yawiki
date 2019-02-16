@@ -1,0 +1,48 @@
+= heading 1
+== heading 2
+=== heading 3
+==== heading 4
+===== heading 5
+====== heading 6
+======= still heading 6
+
+==== heading with **bold**
+
+==== heading with //italic//
+
+====+ heading with cut
+
+**Bold**
+//italic//
+??question??
+__underline__
+((url text))
+((url2))
+%%code%%
+
+!!red!!
+!!(green)green!!
+!!(yellow)yellow!!
+
+foo --strikethrough-- bar
+
+staff:foo, кому:bar, укого:baz, @FOO_BAR, staff:qux
+
+> some long
+> quote
+ > not quote
+
+https://some.link
+
+%%(js)
+var test = 10;
+const str = 'hello world';
+%%
+****
+
+Lorem **ipsum** dolor @user sit amet, //consectetur// adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation https://clck.ru ullamco ??laboris??? nisi ut aliquip ex ea commodo
+consequat. Duis aute irure ??asd **test** dolor?? in reprehenderit in voluptate velit esse
+cillum ((test asd)) eu fugiat nulla pariatur. Excepteur sint %%occaecat%% cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
