@@ -1,0 +1,65 @@
+{
+    "name": "Yandex Wiki Color Scheme",
+    "variables": {
+        "yandex-red": "red",
+        "code-back": "rgb(246, 245, 243)"
+    },
+    "globals": {
+        "background": "#fff",
+        "foreground": "#000",
+        "caret": "#000",
+        "selection": "#fafaf0"
+    },
+    "rules": [
+        {
+            "name": "Heading",
+            "scope": "markup.heading",
+            "font_style": "bold"
+        },
+        {
+            "name": "Quote",
+            "scope": "markup.quote",
+            "foreground": "maroon"
+        },
+        {
+            "name": "Question",
+            "scope": "markup.question",
+            "background": "#FFA9AC"
+        },
+        {
+            "name": "Code",
+            "scope": "markup.raw",
+            "background": "var(code-back)"
+        },
+        {
+            "name": "Bold",
+            "scope": "markup.bold",
+            "font_style": "bold"
+        },
+        {
+            "name": "Mention",
+            "scope": "markup.mention",
+            "background": "#f9f9f9"
+        },
+        {
+            "name": "Mention @",
+            "scope": "markup.mention.at",
+            "foreground": "var(yandex-red)"
+        },
+        {
+            "name": "Mention qualifer",
+            "scope": "markup.mention.qualifer",
+            "foreground": "#aaa"
+        },
+        {
+            "name": "Italic",
+            "scope": "markup.italic",
+            "font_style": "italic"
+        },
+        {
+            "name": "Link",
+            "scope": "markup.underline.link",
+            "foreground": "rgb(26, 61, 193)"
+        }
+    ]
+}
