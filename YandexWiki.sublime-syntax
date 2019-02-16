@@ -1,0 +1,120 @@
+%YAML 1.2
+---
+name: Yandex Wiki
+file_extensions: [wiki, yawiki]
+first_line_match: ^[=]{1,6}
+scope: text.yawiki
+
+variables:
+  login: '\w[-\w]*\w'
+
+contexts:
+  main:
+    - include: heading
+    - include: inline-quote
+    - include: code
+    - include: inline
+
+  heading:
+    - match: \G(?:[=]{1,6}\s*)
+      captures:
+        1: punctuation.definition.heading.begin
+      push:
+      - meta_scope: markup.heading.1
+      - meta_content_scope: entity.name.section
+      - match: $
+        pop: true
+      - include: inline
+
+  inline:
+    - include: link
+    - include: autolink
+    - include: question
+    - include: bold
+    - include: italic
+    - include: strikethrough
+    - include: underline
+    - include: username
+
+  inline-quote:
+    - match: ^>[ ]?
+      push:
+      - meta_scope: markup.quote
+      - match: $
+        pop: true
+
+  username:
+    - match: '(@){{login}}'
+      captures:
+        1: markup.mention.at
+      scope: markup.mention
+    - match: '((кто|кого|укого|кому|кем|staff):){{login}}'
+      captures:
+        1: markup.mention.qualifer
+      scope: markup.mention
+
+  link:
+    - match: '\(\((.+) (.+)\)\)'
+      scope: markup.underline.link
+      captures:
+        1: markup.underline.link
+
+  autolink:
+    - match: (((https|http|ftp)://)|www\.)[\w-]+(\.[\w-]+)+
+      scope: markup.underline.link
+      push: # After a valid domain, zero or more non-space non-< characters may follow
+        - match: (?=[?!.,:*_~]*[\s<]) # Trailing punctuation (specifically, ?, !, ., ,, :, *, _, and ~) will not be considered part of the autolink, though they may be included in the interior of the link
+          pop: true
+        - match: (?=\)[?!.,:*_~]*[\s<])
+          pop: true
+        - match: '[^?!.,:*_~\s<&()]+|\S'
+          scope: markup.underline.link
+
+  question:
+    - match: '\?\?'
+      push:
+      - meta_scope: markup.question
+      - match: '\?\?'
+        pop: true
+      - include: bold
+
+  strikethrough:
+    - match: '--'
+      push:
+      - meta_scope: markup.strikethrough
+      - match: '--'
+        pop: true
+
+  bold:
+    - match: '\*\*'
+      push:
+      - meta_scope: markup.bold
+      - match: '\*\*'
+        pop: true
+
+  italic:
+    - match: '//'
+      push:
+      - meta_scope: markup.italic
+      - match: '//'
+        pop: true
+
+  underline:
+    - match: '__'
+      push:
+      - meta_scope: markup.underline
+      - match: '__'
+        pop: true
+
+  code:
+    - match: '%%'
+      push:
+      - meta_scope: markup.raw.block
+      - meta_content_scope: markup.raw.block.content
+      - match: \(js\)
+        push: Packages/JavaScript/JavaScript.sublime-syntax
+        with_prototype:
+          - match: (?=^%%)
+            pop: true
+      - match: '%%'
+        pop: true
