@@ -37,7 +37,7 @@ __not underline __
 
 foo --strikethrough-- bar
 
-staff:foo, кому:bar, укого:baz, @FOO_BAR, staff:qux
+staff:foo, кому:bar, укого:baz, @FOO_BAR, staff:qux, quux@
 
 > some long
 > quote

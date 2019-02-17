@@ -6,7 +6,7 @@ first_line_match: ^[=]{1,6}
 scope: text.yawiki
 
 variables:
-  login: '\w[-\w]*\w'
+  login: '(\w)[-\w]*\w'
 
 contexts:
   main:
@@ -52,6 +52,10 @@ contexts:
     - match: '((кто|кого|укого|кому|кем|staff):){{login}}'
       captures:
         1: markup.mention.qualifer
+      scope: markup.mention
+    - match: '{{login}}@(?!(\w|@))'
+      captures:
+        1: markup.mention.at
       scope: markup.mention
 
   link:
