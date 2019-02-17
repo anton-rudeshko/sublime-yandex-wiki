@@ -13,11 +13,20 @@
 ====+ heading with cut
 
 **Bold**
+**not bold **
+
 //italic//
+//not italic //
+
 ??question??
+??not question ??
+
 __underline__
+__not underline __
+
 ((url text))
 ((url2))
+
 %%code%%
 
 !!red!!

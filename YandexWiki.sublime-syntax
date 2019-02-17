@@ -71,40 +71,24 @@ contexts:
           scope: markup.underline.link
 
   question:
-    - match: '\?\?'
-      push:
-      - meta_scope: markup.question
-      - match: '\?\?'
-        pop: true
-      - include: bold
+    - match: '\?\?.*(?<!\s)\?\?'
+      scope: markup.question
 
   strikethrough:
-    - match: '--'
-      push:
-      - meta_scope: markup.strikethrough
-      - match: '--'
-        pop: true
+    - match: '--.*(?<!\s)--'
+      scope: markup.strikethrough
 
   bold:
-    - match: '\*\*'
-      push:
-      - meta_scope: markup.bold
-      - match: '\*\*'
-        pop: true
+    - match: '\*\*.*(?<!\s)\*\*'
+      scope: markup.bold
 
   italic:
-    - match: '//'
-      push:
-      - meta_scope: markup.italic
-      - match: '//'
-        pop: true
+    - match: '//.*(?<!\s)//'
+      scope: markup.italic
 
   underline:
-    - match: '__'
-      push:
-      - meta_scope: markup.underline
-      - match: '__'
-        pop: true
+    - match: '__.*(?<!\s)__'
+      scope: markup.underline
 
   code:
     - match: '%%'
