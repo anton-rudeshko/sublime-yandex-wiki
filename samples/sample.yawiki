@@ -29,9 +29,11 @@ __not underline __
 
 %%code%%
 
-!!red!!
-!!(green)green!!
-!!(yellow)yellow!!
+!!red!!, !!(red)red!!, !!(крас)red!!, !!(красный)red!!
+!!(green)green!!, !!(зел)green!!, !!(зеленый)green!!
+!!(blue)blue!!, !!(син)blue!!, !!(синий)blue!!
+!!(gray)gray!!, !!(grey)gray!!, !!(сер)gray!!, !!(серый)gray!!
+!!(yellow)yellow!!, !!(жел)yellow!!
 
 foo --strikethrough-- bar
 

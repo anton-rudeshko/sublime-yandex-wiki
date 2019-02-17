@@ -33,6 +33,7 @@ contexts:
     - include: bold
     - include: italic
     - include: strikethrough
+    - include: remark
     - include: underline
     - include: username
 
@@ -89,6 +90,18 @@ contexts:
   underline:
     - match: '__.*(?<!\s)__'
       scope: markup.underline
+
+  remark:
+    - match: '!!\((green|зел|зеленый)\).*(?<!\s)!!'
+      scope: markup.remark markup.remark.green
+    - match: '!!\((blue|син|синий)\).*(?<!\s)!!'
+      scope: markup.remark markup.remark.blue
+    - match: '!!\((gray|grey|сер|серый)\).*(?<!\s)!!'
+      scope: markup.remark markup.remark.gray
+    - match: '!!\((yellow|жел)\).*(?<!\s)!!'
+      scope: markup.remark markup.remark.yellow
+    - match: '!!(\((red|крас|красный)\))?.*(?<!\s)!!'
+      scope: markup.remark markup.remark.red
 
   code:
     - match: '%%'

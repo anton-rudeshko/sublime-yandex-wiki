@@ -57,6 +57,31 @@
             "font_style": "italic"
         },
         {
+            "name": "Remark red",
+            "scope": "markup.remark.red",
+            "foreground": "#c00"
+        },
+        {
+            "name": "Remark green",
+            "scope": "markup.remark.green",
+            "foreground": "green"
+        },
+        {
+            "name": "Remark blue",
+            "scope": "markup.remark.blue",
+            "foreground": "#04b"
+        },
+        {
+            "name": "Remark gray",
+            "scope": "markup.remark.gray",
+            "foreground": "gray"
+        },
+        {
+            "name": "Remark yellow",
+            "scope": "markup.remark.yellow",
+            "foreground": "gold"
+        },
+        {
             "name": "Link",
             "scope": "markup.underline.link",
             "foreground": "rgb(26, 61, 193)"
