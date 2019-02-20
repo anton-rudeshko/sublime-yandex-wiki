@@ -1,6 +1,6 @@
 # Yandex Wiki
 
-Sublime Text syntax support for Yandex Wiki.
+Sublime Text syntax support for [Yandex Wiki](https://yandex.ru/support/connect-wiki/static-markup.html?lang=en).
 
 ### Resources
 
