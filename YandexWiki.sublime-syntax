@@ -2,7 +2,7 @@
 ---
 name: Yandex Wiki
 file_extensions: [wiki, yawiki]
-first_line_match: ^[=]{1,6}
+first_line_match: ^[=]{2,7}
 scope: text.yawiki
 
 variables:
@@ -16,7 +16,7 @@ contexts:
     - include: inline
 
   heading:
-    - match: \G(?:[=]{1,6}\s*)
+    - match: \G(?:[=]{2,7}\s*)
       captures:
         1: punctuation.definition.heading.begin
       push:
