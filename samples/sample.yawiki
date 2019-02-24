@@ -19,6 +19,7 @@
 //not italic //
 
 ??question??
+??question ?? default ??question??
 ??not question ??
 
 __underline__
@@ -34,6 +35,8 @@ __not underline __
 !!(blue)blue!!, !!(син)blue!!, !!(синий)blue!!
 !!(gray)gray!!, !!(grey)gray!!, !!(сер)gray!!, !!(серый)gray!!
 !!(yellow)yellow!!, !!(жел)yellow!!
+
+!!red!! default !!(жел)yellow!!
 
 foo --strikethrough-- bar
 

@@ -76,7 +76,7 @@ contexts:
           scope: markup.underline.link
 
   question:
-    - match: '\?\?.*(?<!\s)\?\?'
+    - match: '\?\?.*?(?<!\s)\?\?'
       scope: markup.question
 
   strikethrough:
@@ -96,15 +96,15 @@ contexts:
       scope: markup.underline
 
   remark:
-    - match: '!!\((green|зел|зеленый)\).*(?<!\s)!!'
+    - match: '!!\((green|зел|зеленый)\).*?(?<!\s)!!'
       scope: markup.remark markup.remark.green
-    - match: '!!\((blue|син|синий)\).*(?<!\s)!!'
+    - match: '!!\((blue|син|синий)\).*?(?<!\s)!!'
       scope: markup.remark markup.remark.blue
-    - match: '!!\((gray|grey|сер|серый)\).*(?<!\s)!!'
+    - match: '!!\((gray|grey|сер|серый)\).*?(?<!\s)!!'
       scope: markup.remark markup.remark.gray
-    - match: '!!\((yellow|жел)\).*(?<!\s)!!'
+    - match: '!!\((yellow|жел)\).*?(?<!\s)!!'
       scope: markup.remark markup.remark.yellow
-    - match: '!!(\((red|крас|красный)\))?.*(?<!\s)!!'
+    - match: '!!(\((red|крас|красный)\))?.*?(?<!\s)!!'
       scope: markup.remark markup.remark.red
 
   code:
