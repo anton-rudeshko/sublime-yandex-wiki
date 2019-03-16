@@ -2,6 +2,8 @@
 
 Sublime Text syntax support for [Yandex Wiki](https://yandex.ru/support/connect-wiki/static-markup.html?lang=en).
 
+![Sample screenshot](./assets/concise-sample.png)
+
 ## Installation
 
 The preferred method of installation is via [Sublime Package Control][package-control]. Package Control automatically download the package and keeps it up-to-date.
@@ -16,7 +18,22 @@ The preferred method of installation is via [Sublime Package Control][package-co
 
 ## Features
 
-TBD
+Syntax highlighting:
+
+* headings
+* bold, italic, questions, colored remarks, underline, strikethrough
+* inline code & block (using `%%`)
+* logins (@xxx, xxx@, кто:xxx, etc)
+* inline quote
+* horizontal line
+
+Hotkeys to wrap selection:
+
+* <kbd>*</kbd> — bold (`**selection**`)
+* <kbd>/</kbd> — italic (`//selection//`)
+* <kbd>?</kbd> — question (`??selection??`)
+* <kbd>!</kbd> — remark (`!!selection!!`)
+* <kbd>%</kbd> — code (`%%selection%%`)
 
 ## Resources
 
