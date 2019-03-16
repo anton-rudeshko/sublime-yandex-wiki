@@ -90,6 +90,11 @@
             "name": "Link text",
             "scope": "markup.underline.text",
             "foreground": "rgb(26, 61, 193)"
+        },
+        {
+            "name": "Separator",
+            "scope": "meta.separator",
+            "background": "#eee"
         }
     ]
 }
