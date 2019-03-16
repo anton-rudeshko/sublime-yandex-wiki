@@ -82,8 +82,13 @@
             "foreground": "gold"
         },
         {
-            "name": "Link",
+            "name": "Link URL",
             "scope": "markup.underline.link",
+            "foreground": "#999"
+        },
+        {
+            "name": "Link text",
+            "scope": "markup.underline.text",
             "foreground": "rgb(26, 61, 193)"
         }
     ]

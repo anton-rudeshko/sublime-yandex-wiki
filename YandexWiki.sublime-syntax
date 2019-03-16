@@ -59,10 +59,11 @@ contexts:
       scope: markup.mention
 
   link:
-    - match: '\(\((.+) (.+)\)\)'
+    - match: '\(\((.+?) (.+?)\)\)'
       scope: markup.underline.link
       captures:
         1: markup.underline.link
+        2: markup.underline.text
 
   autolink:
     - match: (((https|http|ftp)://)|www\.)[\w-]+(\.[\w-]+)+
