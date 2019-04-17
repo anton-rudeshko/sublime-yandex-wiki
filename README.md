@@ -40,3 +40,4 @@ Hotkeys to wrap selection:
 * Sublime Docs: [color scheme](https://www.sublimetext.com/docs/3/color_schemes.html), [syntax matching](http://www.sublimetext.com/docs/3/syntax.html).
 * [PackageControl page](https://packagecontrol.io/packages/YandexWiki).
 * [PackageControl definition](https://github.com/wbond/package_control_channel/blob/35c865ab30bf4c425a29dac8a6c4e72e3e3b44d8/repository/y.json#L47-L57) (as of 19 Mar 2019).
+* [Yandex Wiki for Visual Studio Code](https://github.com/rusnasonov/vscode-yandex-wiki)
