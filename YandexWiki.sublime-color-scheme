@@ -27,6 +27,11 @@
             "background": "#FFA9AC"
         },
         {
+            "name": "Strikethrough",
+            "scope": "markup.strikethrough",
+            "foreground": "#777"
+        },
+        {
             "name": "Code",
             "scope": "markup.raw",
             "background": "var(code-back)"
@@ -89,7 +94,7 @@
         {
             "name": "Link text",
             "scope": "markup.underline.text",
-            "foreground": "rgb(26, 61, 193)"
+            "foreground": "#1a3dc1"
         },
         {
             "name": "Separator",

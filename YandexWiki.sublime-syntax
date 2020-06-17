@@ -68,14 +68,14 @@ contexts:
 
   autolink:
     - match: (((https|http|ftp)://)|www\.)[\w-]+(\.[\w-]+)+
-      scope: markup.underline.link
+      scope: markup.underline.text
       push: # After a valid domain, zero or more non-space non-< characters may follow
         - match: (?=[?!.,:*_~]*[\s<]) # Trailing punctuation (specifically, ?, !, ., ,, :, *, _, and ~) will not be considered part of the autolink, though they may be included in the interior of the link
           pop: true
         - match: (?=\)[?!.,:*_~]*[\s<])
           pop: true
         - match: '[^?!.,:*_~\s<&()]+|\S'
-          scope: markup.underline.link
+          scope: markup.underline.text
 
   question:
     - match: '\?\?.*?(?<!\s)\?\?'
